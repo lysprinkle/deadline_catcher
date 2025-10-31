@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas Scraper</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    button { padding: 1em 2em; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Canvas Scraper</h1>
+  <button id="startBtn">Start Scraping</button>
+  <p id="status"></p>
+
+  <script>
+    document.getElementById("startBtn").addEventListener("click", async () => {
+      document.getElementById("status").textContent = "Working...";
+      const res = await fetch("/start", { method: "POST" });
+      const data = await res.json();
+
+      if (data.status === "login_required") {
+        document.getElementById("status").textContent =
+          "Please log in to Canvas in the opened browser, then click the button again.";
+      } else if (data.status === "ok") {
+        document.getElementById("status").textContent = "Done. Downloading...";
+        window.location.href = data.download_url;
+      } else {
+        document.getElementById("status").textContent = "Error: " + data.message;
+      }
+    });
+  </script>
+</body>
+</html>
