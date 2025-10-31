@@ -1,0 +1,61 @@
+# ===== Python general =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# ===== Virtual environments =====
+venv/
+.env/
+canvasenv/
+.venv/
+env/
+ENV/
+pip-wheel-metadata/
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ===== OS generated files =====
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ===== Flask / Web =====
+instance/
+*.db
+*.sqlite3
+*.sqlite
+*.log
+*.bak
+
+# ===== Selenium / Browser cache =====
+selenium-screenshots/
+selenium-logs/
+chromedriver.log
+
+# ===== Output data =====
+canvas_data.json
+canvas_all_data.json
+canvas_all_data_full.json
+*.ics
+*.csv
+*.xlsx
+*.zip
+
+# ===== Temporary files =====
+*.tmp
+*.temp
+*.swp
+*.bak
+*.log
+*.out
+
+# ===== Jupyter (if used)
+
