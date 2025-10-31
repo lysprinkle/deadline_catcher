@@ -1,4 +1,3 @@
-````markdown
 # 🕸️ Canvas Web Scraper
 
 ## 📖 Overview
@@ -26,7 +25,7 @@ cd canvas-web-scraper
 python3 -m venv canvasenv
 source canvasenv/bin/activate
 pip install -r requirements.txt
-````
+```
 
 ---
 
